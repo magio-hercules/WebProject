@@ -1,0 +1,37 @@
+//doctype html
+//html
+//  head
+//    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+//    title= title
+//    link(rel='stylesheet', href='/stylesheets/style.css')
+//    link(rel='stylesheet', href='/bootstrap/css/bootstrap.css')
+//  body
+//    block content
+
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title= 'BigTeam'
+    block css
+      link(rel='stylesheet', href='/stylesheets/style.css')
+      link(rel='stylesheet', href='/bootstrap/css/bootstrap.css')
+    block js
+      script(src='../app.js')
+  body
+   nav.navbar.navbar-inverse(role="navigation")
+     .container-fluid
+       .navbar-header
+         a.navbar-brand(href="/")
+           |HOME
+       .collapse.navbar-collapse
+         ul.nav.navbar-nav
+           each item in navitems
+             li
+               a(href=item.link)
+                 =item.content
+   div.page-header
+     h1
+       =title
+   block content

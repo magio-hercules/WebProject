@@ -1,0 +1,17 @@
+{
+	"a": {
+		"username": "hercules",
+		"name": "Kim JongMin",
+		"age": "36"
+	}, 
+	"b": {
+		"username": "hoon",
+		"name": "Jang YungHoon",
+		"age": "35"
+	}, 
+	"c": {
+		"username": "ook",
+		"name": "Choi Uk",
+		"age": "34"
+	}
+}
