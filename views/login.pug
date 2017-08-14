@@ -1,0 +1,37 @@
+extends layout
+
+append body
+    .container
+        // Jumbotron
+        //.jumbotron
+            h2 This is the login page
+        // Example row of columns
+        form(method='post', action='/insert', name='formCustomer')
+            h3 ID 
+            input(id='id', type='text', name='id', size='10')
+            h3 Name 
+            input(id='name', type='text', name='name', size='10')
+            h3 Phone 
+            input(type='text', name='phone', size='10')
+            h3 Gender 
+            | Male
+            input(type="radio", name="gender", value="male", checked=gender=="male")
+            | Female
+            input(type="radio", name="gender", value="female", checked=gender=="female")
+            h3 Age 
+            input(type='text', name='age', size='10')
+            br
+            br
+            input(type='submit', value='insert', onclick='this.form.action="/insert"')
+            input(type='submit', value='update', onclick='this.form.action="/update"')
+            input(type='submit', value='delete', onclick='this.form.action="/delete"')
+            input(type='button', value='get', onclick='location.href="/get?id="+document.formCustomer.id.value')
+            input(type='button', value='list', onclick='location.href="/list"')
+            p
+            h1 UserList
+            p Below you will see list of users.
+            br
+            if customers != undefined
+                each customer in customers
+                    p= "ID :" + customer.id + ", Name : " + customer.name + ", Age : " + customer.age
+            

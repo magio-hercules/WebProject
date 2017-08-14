@@ -64,4 +64,11 @@ res.render('error', {
 //  {link: 'boot', content: '예상 layout'}
 //];
 
+// for mongoose
+
+
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://khercules:BigTeam1234@cluster0-shard-00-00-uif6b.mongodb.net:27017,cluster0-shard-00-01-uif6b.mongodb.net:27017,cluster0-shard-00-02-uif6b.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin');
+
+
 module.exports = app;

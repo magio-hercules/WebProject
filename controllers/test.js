@@ -1,7 +1,7 @@
 //var test = null;
 
 module.exports.test = function(req, res) {
-	res.render('index', {title: 'Menu 2'});
+	res.render('home', {title: 'Menu 2'});
 };
 
 // = test;
